@@ -15,7 +15,7 @@ function drawChord(element)
       .attr("width", 400)
       .attr("height", 400)
     .append("g")
-      .attr("transform", "translate(220,220)")
+      .attr("transform", "translate(110,110)")
 
   // create a matrix
   var matrix = [
@@ -26,7 +26,7 @@ function drawChord(element)
   ];
 
   // 4 groups, so create a vector of 4 colors
-  var colors = [ "#440154ff", "#31668dff", "#37b578ff", "#fde725ff"]
+  var colors = [ "#DB4437ff", "#4285F4ff", "#37b578ff", "#fde725ff"]
 
   // give this matrix to d3.chord(): it will calculates all the info we need to draw arc and ribbon
   var res = d3.chord()
