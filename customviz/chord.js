@@ -1,6 +1,6 @@
-d3.select("body").append("div").attr('id', 'my_dataviz')
+
 // create the svg area
-var svg = d3.select("#my_dataviz")
+var svg = d3.select("#viz")
   .append("svg")
     .attr("width", 440)
     .attr("height", 440)
