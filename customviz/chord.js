@@ -3,10 +3,10 @@ looker.plugins.visualizations.add({
    console.log("Hello new chord chart!")
   },
   updateAsync: function(data, element, config, queryResponse, details, done) {
-   drawChord()
+   drawChord(element)
   }
 })
-function drawChord()
+function drawChord(element)
 {
 // create the svg area
  var svg = d3.select(element)
