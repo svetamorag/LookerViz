@@ -12,8 +12,8 @@ function drawChord(element)
 // create the svg area
  var svg = d3.select(element)
     .append("svg")
-      .attr("width", 200)
-      .attr("height", 200)
+      .attr("width", 400)
+      .attr("height", 400)
     .append("g")
       .attr("transform", "translate(220,220)")
 
