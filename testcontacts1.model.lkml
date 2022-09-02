@@ -20,3 +20,4 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 #
 explore: contact_list {}
 explore: uspresidents {}
+explore: chordmatrix {}

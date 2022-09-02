@@ -7,7 +7,7 @@
 # }
 visualization: {
   id: "Custom_Chord"
-  label: "Custom_Chord"
+  label: "Custom Chord"
   dependencies: ["https://d3js.org/d3.v4.min.js"]
   file: "customviz/chord.js"
 }

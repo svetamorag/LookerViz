@@ -4,6 +4,7 @@ looker.plugins.visualizations.add({
   },
   updateAsync: function(data, element, config, queryResponse, details, done) {
    d3.select(element).html('')
+   debugger
    drawChord(element)
   }
 })
@@ -12,8 +13,8 @@ function drawChord(element)
 // create the svg area
  var svg = d3.select(element)
     .append("svg")
-      .attr("width", 400)
-      .attr("height", 400)
+      .attr("width", 300)
+      .attr("height", 300)
     .append("g")
       .attr("transform", "translate(110,110)")
 
