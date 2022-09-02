@@ -3,7 +3,7 @@ looker.plugins.visualizations.add({
    console.log("Hello new chord chart!")
   },
   updateAsync: function(data, element, config, queryResponse, details, done) {
-   d3(element).html('')
+   d3.select(element).html('')
    drawChord(element)
   }
 })
