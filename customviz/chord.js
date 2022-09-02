@@ -1,9 +1,15 @@
 looker.plugins.visualizations.add({
   create: function(element, config) {
-   alert("Hello new Chart")
+   console.log("Hello new chord chart!")
   },
   updateAsync: function(data, element, config, queryResponse, details, done) {
-    var svg = d3.select(element)
+   drawChord()
+  }
+})
+function drawChord()
+{
+// create the svg area
+ var svg = d3.select(element)
     .append("svg")
       .attr("width", 440)
       .attr("height", 440)
@@ -56,7 +62,4 @@ looker.plugins.visualizations.add({
       )
       .style("fill", function(d){ return(colors[d.source.index]) }) // colors depend on the source group. Change to target otherwise.
       .style("stroke", "black");
-
-  }
-})
-// create the svg area
+}
