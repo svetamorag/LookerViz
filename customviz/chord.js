@@ -12,8 +12,8 @@ function drawChord(element)
 // create the svg area
  var svg = d3.select(element)
     .append("svg")
-      .attr("width", 250)
-      .attr("height", 250)
+      .attr("width", 200)
+      .attr("height", 200)
     .append("g")
       .attr("transform", "translate(220,220)")
 
@@ -26,7 +26,7 @@ function drawChord(element)
   ];
 
   // 4 groups, so create a vector of 4 colors
-  var colors = d3.scaleOrdinal(d3.schemeCategory20);
+  var colors = [ "#440154ff", "#31668dff", "#37b578ff", "#fde725ff"]
 
   // give this matrix to d3.chord(): it will calculates all the info we need to draw arc and ribbon
   var res = d3.chord()
