@@ -3,6 +3,7 @@ looker.plugins.visualizations.add({
    console.log("Hello new chord chart!")
   },
   updateAsync: function(data, element, config, queryResponse, details, done) {
+   d3(element).html('')
    drawChord(element)
   }
 })
@@ -11,8 +12,8 @@ function drawChord(element)
 // create the svg area
  var svg = d3.select(element)
     .append("svg")
-      .attr("width", 440)
-      .attr("height", 440)
+      .attr("width", 250)
+      .attr("height", 250)
     .append("g")
       .attr("transform", "translate(220,220)")
 
@@ -25,7 +26,7 @@ function drawChord(element)
   ];
 
   // 4 groups, so create a vector of 4 colors
-  var colors = [ "#440154ff", "#31668dff", "#37b578ff", "#fde725ff"]
+  var colors = d3.scaleOrdinal(d3.schemeCategory20);
 
   // give this matrix to d3.chord(): it will calculates all the info we need to draw arc and ribbon
   var res = d3.chord()
