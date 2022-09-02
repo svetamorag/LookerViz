@@ -46,8 +46,8 @@ function drawChord(element)
       .style("fill", function(d,i){ return colors[i] })
       .style("stroke", "black")
       .attr("d", d3.arc()
-        .innerRadius(200)
-        .outerRadius(210)
+        .innerRadius(100)
+        .outerRadius(110)
       )
 
   // Add the links between groups
@@ -59,7 +59,7 @@ function drawChord(element)
     .enter()
     .append("path")
       .attr("d", d3.ribbon()
-        .radius(200)
+        .radius(100)
       )
       .style("fill", function(d){ return(colors[d.source.index]) }) // colors depend on the source group. Change to target otherwise.
       .style("stroke", "black");
