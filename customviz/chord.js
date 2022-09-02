@@ -1,6 +1,6 @@
 
 // create the svg area
-var svg = d3.select("#viz")
+var svg = d3.select("#vis")
   .append("svg")
     .attr("width", 440)
     .attr("height", 440)
