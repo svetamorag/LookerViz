@@ -8,6 +8,6 @@
 visualization: {
   id: "Custom_Chord"
   label: "Custom_Chord"
-  dependencies: ["http://d3js.org/d3.v3.min.js"]
+  dependencies: ["https://d3js.org/d3.v3.min.js"]
   file: "customviz/chord.js"
 }
