@@ -5,20 +5,20 @@ looker.plugins.visualizations.add({
   updateAsync: function(data, element, config, queryResponse, details, done) {
    d3.select(element).html('')
    debugger
-   drawChord(element)
+   drawChord(element,data)
   }
 })
-function drawChord(element)
+function drawChord(element,data)
 {
 // create the svg area
  var svg = d3.select(element)
     .append("svg")
-      .attr("width", 300)
-      .attr("height", 300)
+      .attr("width", 250)
+      .attr("height", 250)
     .append("g")
       .attr("transform", "translate(110,110)")
 
-  // create a matrix
+  // create a matrix - here should be data transformation
   var matrix = [
     [0,  5871, 8916, 2868],
     [ 1951, 0, 2060, 6171],
